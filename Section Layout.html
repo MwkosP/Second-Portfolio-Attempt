@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+     
+
+        body{
+            background-color: #000000;
+            
+        }
+        section{
+            min-height: 100vh;
+        }
+        h2{
+            font-size: 50px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+        }
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    
+    padding: 110px; /* Adds 20px padding on all sides (top, bottom, left, right) */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculation */
+}
+.containerhome {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    padding: 150px; /* Adds 20px padding on all sides (top, bottom, left, right) */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculation */
+}
+.containerprojects{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding: 10px; /*0  padding on all sides (top, bottom, left, right) */
+}
+.containerknowledge{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    padding: 10px; /*0  padding on all sides (top, bottom, left, right) */
+}
+
+
+#boxhome {
+    width: 100%;
+    
+    height: 70vh;
+    
+    color: white;
+    border-radius: 10px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;  /* Center content vertically */
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+}
+#boxhome h1 {
+    margin-bottom: 20px; /* Adjust this value to reduce the gap */
+}
+
+#boxhome p {
+    margin-bottom: 20px; /* Adjust this value to reduce the gap */
+}
+footer{
+  width: 100%;
+  height: 10vh;
+  background-color: #f2380a;
+  display: var(#000000);
+}
+
+
+#box1 {
+    /* Customize this box's position or styles if needed */
+     width: 70%; /* Adjust width as needed */
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+}
+#boxProject{
+  /* Customize this box's position or styles if needed */
+  width: 70%; /* Adjust width as needed */
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+}
+
+#box2 {
+    /* Customize this box's position or styles if needed */
+    width: 45%; /* Adjust width as needed */
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+}
+nav {
+            position: fixed;
+            width: 100%;
+            opacity: 1;
+            padding: 0px;
+            z-index: 100;
+            background-color: #065465;/*0A0A0A #065465; #FF0000*/
+            border: none ;
+            height: 60px;
+top: 0;
+ }
+ #box3{
+    width: 90%; /* Adjust width as needed */
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+ }
+ #box4{
+    width: 40%; /* Adjust width as needed */
+    height: 20%;
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    
+ }
+ #boxKnowledge{
+  width: 90%; /* Adjust width as needed */
+    padding: 20px;
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+ }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            margin-right: 100px;
+            gap: 1.5%;
+        }
+        
+        nav ul li a {
+            color:white;
+           background-color:  #065465;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+            
+            cursor: pointer;
+            display: inline-block; /* Ensure a block-level element for hover */
+             /* Add some padding to make the hover effect smoother */
+        }
+        nav ul li button{
+            background-color: white;
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-start; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 50%; /* Take full height of the button */
+            margin-top: 30%;
+            width: 100%; /* Take full width of the button */
+        }
+        nav ul li button i{
+            color: #000000;
+            
+        }
+        
+        nav ul li a:hover {
+           
+            transform: scale(1.1); /* Apply the scale effect */
+            background-color: #80006b; /* Optional: Add a slight background change */
+            border-radius: 10px; /* Smaller border radius on hover */
+        }
+        
+        #scroll-down-button {
+            margin-top: auto; /* Pushes the button to the bottom */
+            background-color: white;
+            color: #065465;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            text-align: left;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 90%;
+        }
+        #scroll-up-button {
+            position: fixed; /* Fixes the button's position on the screen */
+    bottom: 20px;    /* 20px from the bottom of the screen */
+    right: 20px;     /* 20px from the right of the screen */
+    padding: 10px 20px;
+    background-color: #f2380a; /* Green background */
+    color: white;     /* White text */
+    border: none;     /* No border */
+    border-radius: 50%; /* Rounded corners */
+    cursor: pointer;   /* Pointer cursor on hover */
+    font-size: 16px;   /* Font size */
+    display: flex;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+        }
+        #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 550%;/*As many sections you have*100% */
+      background-color: #000000; /* Black background */
+      z-index: -1; /* Push it behind all other content */
+      top: 0;
+      left: 0;
+  }
+
+        #hrCustom{
+            width: 20%;
+            position: absolute;
+        }
+        /* Styles for screens 768px wide or less (like tablets or mobiles) */
+@media only screen and (max-width: 1200px) {
+    body {
+       /* background-color: green;*/
+        display: block;
+    }
+    #box1{
+      width: 90%;
+      display: block;
+      margin-bottom: 20%;
+      height: 400px;
+    
+    }
+    #box2{
+      display: block;
+      width: 100%;
+      
+      height: 350px;
+    }
+    .container {
+      display: block;
+      
+    
+    
+     /* Ensures padding is included in width/height calculation */
+}
+    section div h1{
+      font-size: 30px;
+    } 
+    section div p{
+      font-size: 17px;
+    }
+}
+
+/* For mobile screens (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+  body{
+    /*background-color: #f00808;*/
+  }  
+   /* Styling for the first box on the home page */
+   #boxhome {
+        width: 100%; /* Take the full width of the container */
+        padding: 20px; /* Add some padding for breathing space */
+        text-align: center; /* Center the text */
+        background-color: rgba(0, 0, 0, 0.5); /* Keep background styling */
+        border-radius: 10px; /* Add some roundness */
+    }
+     /* Adjust the font size of the h1 and p tags to fit smaller screens */
+     #boxhome h1 {
+        font-size: 24px; /* Adjust heading size for mobile */
+        margin-bottom: 10px; /* Reduce margin for better spacing */
+    }
+  #box1{
+      width: 90%;
+      display: block;
+      margin-bottom: 20%;
+      height: 500px;
+      text-align: left;
+      position: relative;
+    }
+    #box2, #box3, #box4 {
+      display: block;
+      width: 90%;
+      height: 500px;
+      margin-bottom: 10%;
+      position: relative;
+    }
+    #boxProject{
+      /* Customize this box's position or styles if needed */
+     width: 90%; /* Adjust width as needed */
+    padding: 20px;
+    margin-top: 100px;
+    
+    background-color:#065465;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+    display: block;
+    }
+    #boxKnowledge{
+  width: 90%; /* Adjust width as needed */
+   
+   margin-top: 30px
+   ;
+ }
+
+    .container {
+      display: block;
+      padding: 30px; 
+     
+      
+    }
+     .containerhome {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 50px 20px; /* Reduce padding for better fit on mobile */
+        box-sizing: border-box;
+    }
+
+.containerprojects {
+    display: flex; /* Use flexbox for better alignment control */
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-start; /* Start aligning vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 15px; /* Add space between the buttons */
+    padding: 20px; /* Optional: Adds padding around the container */
+}
+    .containerknowledge{
+    display: block;
+    justify-content: flex-start;
+    
+     
+}
+
+#btn {
+    height: auto; /* Set to auto for better flexibility */
+    text-align: left; /* Align text to the left */
+    padding-right: 90%; /* Add padding as required */
+    margin-bottom: 10px; /* Space between stacked buttons */
+    font-size: 13px;
+    display: flex; /* Use flexbox for better alignment */
+    ; /* Align text to the left */
+     /* Center vertically if needed */
+    background-color: #80006b;
+    border-radius: 10px;
+}
+
+    nav{
+     
+
+    }
+    nav ul li a{
+     display: none;
+      font-size: 10px;
+    }
+    nav ul li button{
+      display: none;
+    }
+    #contactBtn{
+      width: 40%;
+      height: 7%;
+      border-radius: 20px;
+      margin-top: 50%;
+      
+    }
+    #viewBtn{
+      border-radius: 20px;
+      background-color: #80006b;
+    }
+    
+   
+}
+
+
+
+@keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px); /* Move down */
+            }
+        }
+        @keyframes moveLeftRight {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px); /* Move down */
+            }
+        }
+        
+
+ /* Footer Styles */
+ footer {
+    background: #fa0404;
+    color: white;
+    text-align: center;
+    height: 25vh; /* As you originally wanted */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    clear: both; /* Ensures it doesn't overlap any floated content */
+}
+
+
+        #btn{
+          height: 100px;
+           width: 10%;
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+
+ 
+    <nav id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#knowledge">Knowledge</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#socials">Socials</a></li>
+            <li><button id="backgroundColor"><i class="fas fa-moon"></i></button></li>
+            
+        </ul>
+    </nav>
+
+    
+    <button id="scroll-up-button"></button>
+    
+    <section class="containerhome">
+       
+        <div id="boxhome" >
+            <h1>Hey, I'm <span class="highlight">Panagiotis Mokos</span></h1>
+            <p>Web Developer | Java Developer | Machine Learning & Blockchain Enthusiast |<br>Problem Solver | LeetCode Grinder</p>
+            
+            <!-- Button using flexbox to center or space it out -->
+            <div style="flex-grow: 1;"></div> <!-- This takes up the remaining space -->
+
+           
+            
+
+            <a href="#about">
+                <button id="scroll-down-button">Scroll  &#8595;<br>Down &#8595;</button>
+            </a>
+        </div>
+    </section>
+  
+
+    <section class="container">
+        <div id="box1" >
+            <h1>About Me <hr id="hrCustom"></h1>
+                <p>Hello, I'm Panagiotis Mokos, a creative and driven Web Developer and Java Developer <br>
+                   with a deep passion for Machine Learning and Blockchain technologies. <br>
+                   I thrive on solving complex problems and transforming innovative ideas into functional, <br>
+                   user-friendly applications.</p>
+                <p>I specialize in building responsive, scalable web applications, utilizing modern technologies <br>
+                   to ensure performance and user experience are at the forefront. From front-end <br>
+                   development to backend architecture, I aim to create digital experiences that are both <br>
+                   visually engaging and highly efficient.</p>
+        </div>
+        <div id="box2" >
+            <iframe src="https://gianmarcocavallo.com" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+        
+    </section>
+  
+   
+    <section class="container">
+        <div id="box2" >
+            <iframe src="https://codingweek.org/digital-skills-challenge-2022/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="boxProject" >
+            <h1 >Projects <hr></h1>
+          
+            <p>Here are some of my works that showcase my skills and expertise.</p>
+            <br>
+            <button id="viewBtn"  style="margin-left: 80%; width: 20%;">View All</button>
+            <div  class="containerprojects">
+                <br>
+                <button id="btn" >ML Model</button>
+                <button id="btn" >Web Page for Business Built with Rest API</button>
+                <button id="btn" >Investment Application - Built in Java</button>
+            </div>
+
+            
+        </div>
+    </section>
+    
+
+
+    <section class="container">
+        <div id="boxKnowledge" >
+            <h1 >Knowledge <hr></h1>
+            <p>Programing Languages that i know:</p>
+            <br>
+            <p>Front - End:</p>
+            <div  class="containerknowledge">
+                
+                <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+            </div>
+            <p>Back - End:</p>
+            <div  class="containerknowledge">
+              <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+                <button id="x" style="height: 100px; width: 20%;"></button>
+            </div>
+        </div>
+       
+    </section>
+
+
+
+    <section class="container">
+        <div id="box4" class="box">
+            <h1 >Contact Me <hr></h1>
+            <p>Feel free to reach out for collaboration or just a friendly chat!</p>
+          
+            <p>My Gmail:  randomgmail@gmail.com</p>
+            <p>My Phone Number:  6999578645</p>
+           
+            <div style="flex-grow: 1;"></div> <!-- This takes up the remaining space -->
+            <a href="#about">
+                <button id="contactBtn">Send Email &rarr;</button>
+            </a>
+        </div>
+       
+    </section>
+
+
+    <footer id= "socials">
+     
+  </footer>
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 20,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#00E5EE"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 4,
+            "color": "#00E5EE"
+          },
+          "polygon": {
+            "nb_sides": 10
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 1,
+          "random": false,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "size_min": 0.3,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 200,
+          "color": "#00E5EE",
+          "opacity": 0.5,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": true,
+          "attract": {
+            "enable": true,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 0.5
+            }
+          },
+          "bubble": {
+            "distance": 250,
+            "size": 0,
+            "duration": 2,
+            "opacity": 0,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 400,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+
+
+
+
+
+
+    ///////////////////////////////
+    //THREEJS
+
+  </script>
+  
+
+</html>
